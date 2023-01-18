@@ -1,5 +1,16 @@
 function fibonacci(num) {
-  // type your code here
+  
+  let a = 0, b = 1, newSum;
+
+  while (num >= 0) {
+    newSum = a;
+    a = a + b;
+    b = newSum;
+    num--;
+  }
+
+  return b
+
 }
 
 if (require.main === module) {
@@ -16,6 +27,16 @@ if (require.main === module) {
 
   console.log("Expecting: 55");
   console.log("=>", fibonacci(10));
+
+  console.log("");
+
+  console.log("Expecting: 6765");
+  console.log("=>", fibonacci(20));
+
+  console.log("");
+
+  console.log("Expecting: 21");
+  console.log("=>", fibonacci(8));
 }
 
 module.exports = fibonacci;
