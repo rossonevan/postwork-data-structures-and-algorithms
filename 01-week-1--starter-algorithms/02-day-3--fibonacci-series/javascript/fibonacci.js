@@ -3,6 +3,7 @@ function fibonacci(num) {
   let a = 0, b = 1, newSum;
 
   while (num >= 0) {
+    
     newSum = a;
     a = a + b;
     b = newSum;
